@@ -17,8 +17,12 @@ public class InteractRuner{
 		Calculator calc = new Calculator();
 		String exit ="no";
 		 while(!exit.equals("yes")){
+			 // введенное число записывается в строчном формате
                 System.out.println("Введите первое число : ");
                 String first = reader.next();
+                /**выбор мат действия
+                 * осталось разобраться с choice = Integer.parseInt(br.readLine()) или как по другому перевести значение в числовой формат
+                */
                 while (choice==0){
                     System.out.println("Выберите вид операции :");
                     System.out.println("1. Сумма (+)");
@@ -36,6 +40,7 @@ public class InteractRuner{
                 * Выбор функции в зависимости от выбора
                 * */
                 if(choice==1){
+                	// помимо тут преабразунм стороку в число
                     calc.add(Integer.valueOf(first), Integer.valueOf(second));
 
                 }
